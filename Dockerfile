@@ -1,7 +1,7 @@
 FROM node:18 as builder
 
 WORKDIR /calcom
-
+RUN apt-get update && apt-get upgrade -y
 ARG NEXT_PUBLIC_LICENSE_CONSENT
 ARG CALCOM_TELEMETRY_DISABLED
 ARG DATABASE_URL
